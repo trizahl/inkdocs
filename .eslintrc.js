@@ -13,21 +13,29 @@ module.exports = {
     "simple-import-sort/imports": [
       "error",
       {
+    "simple-import-sort/exports": "error",
+
         groups: [
           // Packages `react` related packages come first.
           ["^react", "^@?\\w"],
+      
           // Internal packages.
           ["^(@)(/.*|$)"],
           // Side effect imports.
           ["^\\u0000"],
+    "simple-import-sort/exports": "error",
+
           // Parent imports. Put `..` last.
           ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-          // Other relative imports. Put same-folder imports and `.` last.
+          // Other relative imports. Put same-folder 
+      imports and `.` last.
           ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
           // Style imports.
           ["^.+\\.?(css)$"],
         ],
       },
+    "simple-import-sort/exports": "error",
+
     ],
     "simple-import-sort/exports": "error",
   },
