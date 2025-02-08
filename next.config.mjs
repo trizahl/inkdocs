@@ -16,7 +16,16 @@ const withNextra = nextra({
   }
 })
 
-const config = withNextra({
+const config = withNextra({const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+const withNextra = nextra({
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.tsx',
+  defaultShowCopyCode: true,
+  mdxOptions: {
+    remarkPlugins: [
+      remarkCodeImport,
+    ]
   eslint: {
     ignoreDuringBuilds: true,
   },
